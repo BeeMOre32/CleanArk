@@ -20,7 +20,7 @@ React-app(프레임 워크)
 
 (라이브러리)
 
-Tailwindcss, ReactRouter, beautiful dnd, Framer motion, Recoil, react form hook, gh-pages, date.js, react-reponsive
+ ReactRouter, beautiful dnd, Framer motion, Recoil, react form hook, gh-pages, moment.js, React-hook-form
 
 5. 예상되는 문제점
 
