@@ -1,0 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Gothic+A1&family=Roboto&display=swap");
+@import "./reset.css";
+body {
+  font-family: "Roboto", sans-serif;
+  color: black;
+  width: 100%;
+  height: 100vh;
+}
