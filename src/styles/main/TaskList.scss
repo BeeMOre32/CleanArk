@@ -1,0 +1,48 @@
+.tasklist {
+  font-family: "GmarketSansMedium";
+}
+.dailytask,
+.weeklytask {
+  box-sizing: border-box;
+  padding: 15px;
+  width: 100%;
+  height: fit-content;
+  border-bottom: 1px solid black;
+  h1 {
+    font-size: 2.8rem;
+  }
+}
+.task_header {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  button {
+    font-family: "GmarketSansMedium";
+    font-size: 1.5rem;
+    background-color: inherit;
+  }
+}
+
+.dailytasks {
+  display: flex;
+  flex-direction: column;
+  div {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    span {
+      font-size: 1.5rem;
+    }
+    button {
+      font-family: "GmarketSansMedium";
+      background-color: inherit;
+      border: none;
+    }
+  }
+}
+
+.notset_span {
+  margin-top: 1.5rem;
+  text-align: center;
+}

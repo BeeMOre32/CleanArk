@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../../styles/header/header.css";
 
 export default function Header() {
@@ -5,6 +6,9 @@ export default function Header() {
     <header>
       <div className="headerLogo">
         <span>CleanArk</span>
+        <Link to="/">
+          <span>Home</span>
+        </Link>
       </div>
     </header>
   );

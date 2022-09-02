@@ -1,16 +1,24 @@
 header {
+  font-family: "Roboto";
   width: 100%;
   padding: 20px;
-  font-size: 36px;
+  font-size: 2.3rem;
   box-sizing: border-box;
   border-bottom: 1px solid black;
   -webkit-backdrop-filter: blur(30px);
           backdrop-filter: blur(30px);
   height: 8vh;
 }
+header a {
+  display: flex;
+  text-decoration: none;
+  color: black;
+  margin-left: 5rem;
+}
 
 .headerLogo {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  display: flex;
 }
