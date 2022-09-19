@@ -1,0 +1,74 @@
+.add_homework_menu {
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  position: absolute;
+  background-color: inherit;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  top: 10;
+  right: 0;
+  width: 18rem;
+  height: 50%;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  padding: 0.8rem;
+  font-size: 1.6rem;
+}
+.add_homework_menu form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+  align-items: center;
+}
+.add_homework_menu form select {
+  font-family: "GmarketSansMedium";
+  height: 2rem;
+  width: 10rem;
+  margin-bottom: 1.2rem;
+}
+.add_homework_menu form select option {
+  background-color: black;
+  color: white;
+}
+.add_homework_menu form select:focus {
+  outline: none;
+}
+.add_homework_menu form input {
+  font-family: "GmarketSansMedium";
+  height: 2rem;
+  width: 15rem;
+}
+.add_homework_menu form input::-moz-placeholder {
+  font-size: 1rem;
+}
+.add_homework_menu form input:-ms-input-placeholder {
+  font-size: 1rem;
+}
+.add_homework_menu form input::placeholder {
+  font-size: 1rem;
+}
+.add_homework_menu form input:focus {
+  outline: none;
+}
+.add_homework_menu form p {
+  margin-top: 1rem;
+}
+.add_homework_menu form button {
+  margin-top: 1rem;
+  background-color: white;
+  border: 1px solid black;
+  height: 3rem;
+  width: 50%;
+}
+
+.add_homework_menu_header {
+  margin-top: 3rem;
+}
+
+.add_homework_menu_btn {
+  align-self: center;
+  margin-top: 4rem;
+  height: 2rem;
+  width: 10rem;
+}

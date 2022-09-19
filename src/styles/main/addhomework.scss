@@ -1,0 +1,67 @@
+.add_homework_menu {
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  position: absolute;
+  background-color: inherit;
+  backdrop-filter: blur(20px);
+  top: 10;
+  right: 0;
+  width: 18rem;
+  height: 50%;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  padding: 0.8rem;
+  font-size: 1.6rem;
+  form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+    align-items: center;
+    select {
+      font-family: "GmarketSansMedium";
+      height: 2rem;
+      width: 10rem;
+      margin-bottom: 1.2rem;
+      & option {
+        background-color: black;
+        color: white;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+    input {
+      font-family: "GmarketSansMedium";
+      height: 2rem;
+      width: 15rem;
+      &::placeholder {
+        font-size: 1rem;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+    p {
+      margin-top: 1rem;
+    }
+    button {
+      margin-top: 1rem;
+      background-color: white;
+      border: 1px solid black;
+      height: 3rem;
+      width: 50%;
+    }
+  }
+}
+
+.add_homework_menu_header {
+  margin-top: 3rem;
+}
+
+.add_homework_menu_btn {
+  align-self: center;
+  margin-top: 4rem;
+  height: 2rem;
+  width: 10rem;
+}

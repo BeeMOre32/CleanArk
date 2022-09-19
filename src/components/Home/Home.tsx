@@ -45,7 +45,7 @@ export default function Home() {
           <span>로스트아크 채널</span>
           <a href="https://arca.live/b/lostark" target="_blank">
             <img
-              src="https://arca.live/static/apple-icon.png?t=8154b4ba9f304d19d44deeb43e1dc9ee9718bb6b"
+              src="https://w.namu.la/s/87546109836cfc54559026f859c2a818bd0024329f06afb1142a98660f01ffdb3ddd6ca5fddf3fea6c7b6f19c34f71d9bd630da0843a33056119c1f8289a8b0c3420e2c51e8713e6f55981b9a0d4feec3f452a85427afe814a332d6086ffef72"
               alt=""
               width="50"
             ></img>

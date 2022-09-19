@@ -26,23 +26,33 @@
 .dailytasks {
   display: flex;
   flex-direction: column;
-  div {
-    margin-top: 10px;
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
-    span {
-      font-size: 1.5rem;
-    }
-    button {
-      font-family: "GmarketSansMedium";
-      background-color: inherit;
-      border: none;
-    }
+}
+
+.tasks_btn {
+  justify-content: flex-end;
+}
+
+.tasks_list {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+
+  span {
+    font-size: 1.5rem;
+  }
+  button {
+    font-family: "GmarketSansMedium";
+    background-color: inherit;
+    border: none;
   }
 }
 
 .notset_span {
   margin-top: 1.5rem;
   text-align: center;
+}
+
+.task_checked {
+  text-decoration: line-through;
 }

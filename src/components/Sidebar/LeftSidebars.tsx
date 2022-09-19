@@ -1,18 +1,21 @@
 import { useRecoilState } from "recoil";
-import { character } from "../../Atoms/Atom";
-import { useForm } from "react-hook-form";
+import { Job } from "../../Atoms/Atom";
 import "../../styles/main/main.css";
-import { IFormSubmit } from "../../interface/interface";
 import { DragDropContext, Droppable, DropResult } from "react-beautiful-dnd";
 import Jobs from "./Jobs";
 import styled from "styled-components";
+import { useState } from "react";
+import { AnimatePresence } from "framer-motion";
+import AddJobForm from "./AddJobForm";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 
 const Area = styled.ul<{ isDraggingOver: boolean }>`
   background-color: ${(p) => (p.isDraggingOver ? "#dff9fb" : "inhert")};
 `;
 
 export default function LeftSideBar() {
-  const [job, setJob] = useRecoilState(character);
+  const [job, setJob] = useRecoilState(Job);
   const onDrag = ({ destination, source }: DropResult) => {
     if (!destination) return;
     setJob((AllJob) => {
@@ -25,19 +28,9 @@ export default function LeftSideBar() {
       };
     });
   };
-  const { register, handleSubmit } = useForm<IFormSubmit>();
-  const onSubmit = (data: IFormSubmit) => {
-    const NewJob = {
-      id: Date.now(),
-      class: data.class,
-      name: data.name,
-      Work: {},
-    };
-    setJob((AllJob) => {
-      console.log(AllJob);
-      return { job: [...AllJob.job, NewJob] };
-    });
-  };
+  const [showAddCharacter, setshowAddCharacter] = useState(false);
+  const toggleAddCharacterForm = () => setshowAddCharacter((prev) => !prev);
+
   return (
     <DragDropContext onDragEnd={onDrag}>
       <Droppable droppableId="Job_Board">
@@ -49,17 +42,29 @@ export default function LeftSideBar() {
             {...p.droppableProps}
           >
             {job.job.map((job, i) => (
-              <Jobs key={i} class={job.class} name={job.name} index={i} />
+              <Jobs
+                id={job.id}
+                key={i}
+                class={job.class!}
+                name={job.name!}
+                index={i}
+              />
             ))}
             {p.placeholder}
+            <button
+              className="add_character_btn"
+              onClick={toggleAddCharacterForm}
+            >
+              <FontAwesomeIcon icon={solid("plus")}></FontAwesomeIcon>
+            </button>
           </Area>
         )}
       </Droppable>
-      {/* <form onSubmit={handleSubmit(onSubmit)} className="add_job">
-        <input type="text" {...register("class")} placeholder="Class" />
-        <input type="text" {...register("name")} placeholder="Name" />
-        <button>Add It!</button>
-      </form> */}
+      <AnimatePresence>
+        {showAddCharacter ? (
+          <AddJobForm toggleAddCharacterForm={toggleAddCharacterForm} />
+        ) : null}
+      </AnimatePresence>
     </DragDropContext>
   );
 }

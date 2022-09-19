@@ -1,29 +1,45 @@
-import React from "react";
+import { AnimatePresence } from "framer-motion";
+import React, { useState } from "react";
 import { Draggable } from "react-beautiful-dnd";
 import { Link } from "react-router-dom";
 import { JobComProps } from "../../interface/interface";
 import "../../styles/main/main.css";
+import DeleteJob from "./DeleteJob";
 
 function Jobs(job: JobComProps) {
+  const [jobmodal, setJobmodal] = useState(false);
+  console.log(job.name);
+
+  const onClickHandle = () => setJobmodal((prev) => !prev);
   return (
-    <Draggable key={job.name} index={job.index} draggableId={job.name + ""}>
-      {(p) => (
-        <div
-          ref={p.innerRef}
-          {...p.dragHandleProps}
-          {...p.draggableProps}
-          className="character"
-        >
-          <Link to={job.name} className="job_link">
-            <img
-              src={process.env.PUBLIC_URL + "images/" + job.class + ".png"}
-              width="50px"
-            />
-            <span>{job.name}</span>
-          </Link>
-        </div>
-      )}
-    </Draggable>
+    <>
+      <Draggable key={job.name} index={job.index} draggableId={job.id + ""}>
+        {(p) => (
+          <div
+            ref={p.innerRef}
+            {...p.dragHandleProps}
+            {...p.draggableProps}
+            className="character"
+          >
+            <Link to={job.name} className="job_link">
+              <img
+                src={process.env.PUBLIC_URL + "images/" + job.class + ".png"}
+                width="45px"
+              />
+              <span>{job.name}</span>
+            </Link>
+            <button onClick={onClickHandle} className="job_delete_btn">
+              ❌
+            </button>
+          </div>
+        )}
+      </Draggable>
+      <AnimatePresence>
+        {jobmodal ? (
+          <DeleteJob onClickHandle={onClickHandle} JobName={job.name} />
+        ) : null}
+      </AnimatePresence>
+    </>
   );
 }
 

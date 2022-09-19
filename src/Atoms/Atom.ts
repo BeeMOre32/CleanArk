@@ -1,24 +1,16 @@
 import { atom } from "recoil";
-import { IJobState, IJobwork } from "../interface/interface";
+import { IJobState } from "../interface/interface";
+import { recoilPersist } from "recoil-persist";
 
-export const character = atom<IJobState>({
+const { persistAtom } = recoilPersist({
+  key: "job",
+  storage: localStorage,
+});
+
+export const Job = atom<IJobState>({
   key: "job",
   default: {
-    job: [
-      {
-        id: 0,
-        name: "name",
-        class: "bard",
-        Work: {
-          DailyWork: [{ id: 0, name: "에포나 3회 클리어", eponaQuest: true }],
-        },
-      },
-      {
-        id: 2,
-        name: "name2",
-        class: "bard",
-        Work: {},
-      },
-    ],
+    job: [],
   },
+  effects_UNSTABLE: [persistAtom],
 });

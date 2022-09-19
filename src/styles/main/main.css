@@ -4,7 +4,9 @@
   width: 100%;
   height: 92vh;
   display: grid;
-  grid-template-columns: minmax(200px, 1fr) 4.5fr minmax(200px, 1fr);
+  grid-template-columns: minmax(200px, 1fr) 4fr;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 .main .left_SideBars {
   border-right: 2px solid black;
@@ -17,6 +19,19 @@
   display: grid;
   grid-auto-rows: 70px;
   row-gap: 3px;
+  overflow: auto;
+}
+.left_SideBars::-webkit-scrollbar {
+  width: 10px;
+}
+.left_SideBars::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #2f3542;
+}
+.left_SideBars::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: gray;
+  box-shadow: inset 0px 0px 5px white;
 }
 .left_SideBars .character {
   margin-top: 8px;
@@ -29,6 +44,7 @@
   width: 90%;
   background-color: white;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.06);
+  position: relative;
 }
 
 .job_link {
@@ -38,6 +54,53 @@
   align-items: center;
   text-decoration: none;
   color: black;
+}
+
+.job_delete_btn {
+  background-color: white;
+  border: none;
+  position: absolute;
+  right: 0;
+}
+
+.job_delete_modal {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  z-index: 2;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.job_delete_modal_div {
+  padding: 2rem;
+  width: 35%;
+  height: 35%;
+  font-size: 1.7rem;
+  background-color: #ecf0f1;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.06);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.job_delete_modal_div div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 10rem;
+}
+.job_delete_modal_div div button {
+  font-size: 1.4rem;
+  border-radius: 10px;
+  width: 8rem;
+  height: 4rem;
+  padding: none;
+  background-color: inherit;
+  border: 1px solid black;
 }
 
 .home {
