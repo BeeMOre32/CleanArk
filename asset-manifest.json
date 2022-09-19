@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/CleanArk/static/css/main.3105bfd3.css",
-    "main.js": "/CleanArk/static/js/main.01fd543e.js",
+    "main.js": "/CleanArk/static/js/main.da2f5c38.js",
     "index.html": "/CleanArk/index.html",
     "main.3105bfd3.css.map": "/CleanArk/static/css/main.3105bfd3.css.map",
-    "main.01fd543e.js.map": "/CleanArk/static/js/main.01fd543e.js.map"
+    "main.da2f5c38.js.map": "/CleanArk/static/js/main.da2f5c38.js.map"
   },
   "entrypoints": [
     "static/css/main.3105bfd3.css",
-    "static/js/main.01fd543e.js"
+    "static/js/main.da2f5c38.js"
   ]
 }
