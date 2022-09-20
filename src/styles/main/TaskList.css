@@ -1,5 +1,5 @@
 .tasklist {
-  font-family: "GmarketSansMedium";
+  font-family: "GmarketSansMedium", serif;
 }
 
 .dailytask,
@@ -7,8 +7,6 @@
   box-sizing: border-box;
   padding: 15px;
   width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
   height: fit-content;
   border-bottom: 1px solid black;
 }
@@ -23,12 +21,15 @@
   justify-content: space-between;
 }
 .task_header button {
-  font-family: "GmarketSansMedium";
-  font-size: 1.5rem;
+  font-family: "GmarketSansMedium", serif;
+  width: 8rem;
+  height: 3rem;
+  font-size: 1.25rem;
   background-color: inherit;
+  border-radius: 13px;
 }
 
-.dailytasks {
+.dailytaskes {
   display: flex;
   flex-direction: column;
 }
@@ -47,7 +48,7 @@
   font-size: 1.5rem;
 }
 .tasks_list button {
-  font-family: "GmarketSansMedium";
+  font-family: "GmarketSansMedium", serif;
   background-color: inherit;
   border: none;
 }
@@ -60,3 +61,10 @@
 .task_checked {
   text-decoration: line-through;
 }
+
+.dark_mode_task_btn {
+  border: 1px solid #ecf0f1;
+  color: #ecf0f1;
+}
+
+/*# sourceMappingURL=TaskList.css.map */

@@ -2,7 +2,7 @@
   "name": "loatimer",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://BeeMOre32.github.io/CleanArk",
+  "homepage": "https://BeeMOre32.github.io/CleanArk",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.2",
     "@fortawesome/free-regular-svg-icons": "^6.1.2",
@@ -16,19 +16,20 @@
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "babel-plugin-macros": "^3.1.0",
-    "classnames": "^2.3.1",
+    "classnames": "^2.3.2",
+    "framer-motion": "^7.3.5",
     "gh-pages": "^4.0.0",
     "moment": "^2.29.4",
     "react": "^18.2.0",
-    "react-beautiful-dnd": "^13.1.0",
+    "react-beautiful-dnd": "^13.1.1",
     "react-dom": "^18.2.0",
-    "react-hook-form": "^7.34.2",
-    "react-router": "^6.3.0",
-    "react-router-dom": "^6.3.0",
+    "react-hook-form": "^7.35.0",
+    "react-router": "^6.4.0",
+    "react-router-dom": "^6.4.0",
     "react-scripts": "5.0.1",
     "recoil": "^0.7.5",
     "recoil-persist": "^4.2.0",
-    "sass": "^1.54.4",
+    "sass": "^1.54.9",
     "styled-components": "^5.3.5",
     "typescript": "^4.7.4",
     "web-vitals": "^2.1.4"
@@ -62,5 +63,16 @@
   "devDependencies": {
     "@svgr/webpack": "^6.3.1",
     "@types/react-beautiful-dnd": "^13.1.2"
+  },
+  "description": "1. 개요",
+  "main": "babel-plugin-macros.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BeeMOre32/loahomework.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BeeMOre32/loahomework/issues"
   }
 }

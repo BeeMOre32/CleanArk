@@ -4,8 +4,7 @@
   width: 100vw;
   height: 100vh;
   top: 0;
-  -webkit-backdrop-filter: blur(30px);
-          backdrop-filter: blur(30px);
+  backdrop-filter: blur(30px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,7 +16,6 @@
   border: 1px solid black;
   font-size: 1.5rem;
   border-radius: 100%;
-  background-color: white;
   width: 3rem;
   height: 3rem;
   display: flex;
@@ -30,7 +28,6 @@
   padding: 1rem;
   width: 50%;
   height: 50%;
-  background-color: #ecf0f1;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.06);
   border-radius: 20px;
   display: flex;
@@ -58,12 +55,6 @@
   font-size: 2rem;
   width: 50%;
   margin-top: 1rem;
-  font-family: "GmarketSansMedium";
-}
-.add_character_form form input::-moz-placeholder {
-  font-family: "GmarketSansMedium";
-}
-.add_character_form form input:-ms-input-placeholder {
   font-family: "GmarketSansMedium";
 }
 .add_character_form form input::placeholder {
@@ -97,3 +88,18 @@
   border: none;
   font-size: 1.9rem;
 }
+
+.light_mode_add_form {
+  background-color: #ecf0f1;
+  color: black;
+}
+
+.dark_mode_add_form {
+  background-color: #34495e;
+}
+.dark_mode_add_form form button {
+  color: #ecf0f1;
+  border: 1px solid #ecf0f1;
+}
+
+/*# sourceMappingURL=addcharacter.css.map */

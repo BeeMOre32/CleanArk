@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import { useParams } from "react-router";
+import { useParams } from "react-router-dom";
 import { useRecoilState } from "recoil";
 import { Job } from "../../Atoms/Atom";
 import { IAddHomeWorkForm } from "../../interface/interface";
@@ -59,9 +59,8 @@ export default function AddHomeWork({ onClickHandel }: any) {
       //  1. 현재에 기반한 데이터로 Work 내용을 모두 복사한다
       const copiedCurrentJobTask = copiedCurrentJob.Work;
       // 2. 이전에 있던 data.type 의 내용을 복사를 한다
-      const copiedCurrentTypeTaskList = [...copiedCurrentJobTask[data.type]!];
       // 3. 폼으로 받은 데이터를 기반으로 object 생성 및 기본 배열 업데이트
-      const updatedCurrentTypeTaskList = copiedCurrentTypeTaskList;
+      const updatedCurrentTypeTaskList = [...copiedCurrentJobTask[data.type]!];
       updatedCurrentTypeTaskList.push({
         id: Date.now(),
         name: data.name,
@@ -71,7 +70,7 @@ export default function AddHomeWork({ onClickHandel }: any) {
         ...copiedCurrentJobTask,
         [data.type]: [...updatedCurrentTypeTaskList],
       };
-      //  5. 업데이트한 job task를 현재 있는 직업으로 바꾸기
+      //  5. 업데이트한 job task 현재 있는 직업으로 바꾸기
       const updateCurrentJob = {
         ...copiedCurrentJob,
         Work: {

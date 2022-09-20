@@ -17,7 +17,6 @@ $box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.06);
   border: 1px solid black;
   font-size: 1.5rem;
   border-radius: 100%;
-  background-color: white;
   width: 3rem;
   height: 3rem;
   display: flex;
@@ -29,7 +28,6 @@ $box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.06);
   padding: 1rem;
   width: 50%;
   height: 50%;
-  background-color: #ecf0f1;
   box-shadow: $box-shadow;
   border-radius: 20px;
   display: flex;
@@ -55,6 +53,7 @@ $box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.06);
       font-size: 2rem;
       width: 50%;
       margin-top: 1rem;
+
       font-family: "GmarketSansMedium";
       &::placeholder {
         font-family: "GmarketSansMedium";
@@ -87,5 +86,18 @@ $box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.06);
     background-color: inherit;
     border: none;
     font-size: 1.9rem;
+  }
+}
+.light_mode_add_form {
+  background-color: #ecf0f1;
+  color: black;
+}
+.dark_mode_add_form {
+  background-color: #34495e;
+  form {
+    button {
+      color: #ecf0f1;
+      border: 1px solid #ecf0f1;
+    }
   }
 }

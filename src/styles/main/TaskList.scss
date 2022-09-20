@@ -1,5 +1,5 @@
 .tasklist {
-  font-family: "GmarketSansMedium";
+  font-family: "GmarketSansMedium", serif;
 }
 .dailytask,
 .weeklytask {
@@ -17,13 +17,16 @@
   display: flex;
   justify-content: space-between;
   button {
-    font-family: "GmarketSansMedium";
-    font-size: 1.5rem;
+    font-family: "GmarketSansMedium", serif;
+    width: 8rem;
+    height: 3rem;
+    font-size: 1.25rem;
     background-color: inherit;
+    border-radius: 13px;
   }
 }
 
-.dailytasks {
+.dailytaskes {
   display: flex;
   flex-direction: column;
 }
@@ -42,7 +45,7 @@
     font-size: 1.5rem;
   }
   button {
-    font-family: "GmarketSansMedium";
+    font-family: "GmarketSansMedium", serif;
     background-color: inherit;
     border: none;
   }
@@ -55,4 +58,9 @@
 
 .task_checked {
   text-decoration: line-through;
+}
+
+.dark_mode_task_btn {
+  border: 1px solid #ecf0f1;
+  color: #ecf0f1;
 }

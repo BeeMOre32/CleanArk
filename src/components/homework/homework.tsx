@@ -1,13 +1,14 @@
 import "../../styles/main/TaskList.css";
 import { AnimatePresence, motion } from "framer-motion";
-import { useParams } from "react-router";
-import { useRecoilState } from "recoil";
-import { Job } from "../../Atoms/Atom";
+import { useParams } from "react-router-dom";
+import { useRecoilState, useRecoilValue } from "recoil";
+import { DarkMode, Job } from "../../Atoms/Atom";
 import cn from "classnames";
 import AddHomeWork from "./AddHomeWork";
 import { useState } from "react";
 
 export default function HomeWork() {
+  const darkmode = useRecoilValue(DarkMode);
   // 직업리스트 받아오는 함수
   const [JobList, setHomework] = useRecoilState(Job);
   // 파람 가져오는 함수
@@ -32,9 +33,14 @@ export default function HomeWork() {
         <div className="dailytask">
           <div className="task_header">
             <h1>매일 해야 할 일</h1>
-            <motion.button onClick={onClickHandel}>할 일 추가</motion.button>
+            <motion.button
+              className={cn("tasks_btn", darkmode ? "dark_mode_task_btn" : "")}
+              onClick={onClickHandel}
+            >
+              할 일 추가
+            </motion.button>
           </div>
-          <div className="dailytasks">
+          <div className="dailytaskes">
             {!currentJobTask?.DailyWork?.length ? (
               <h1 className="notset_span">
                 ❗아직 매일 할 일을 설정하지 않았습니다.
@@ -47,6 +53,7 @@ export default function HomeWork() {
                   </span>
                   <div className="tasks_btn">
                     <button
+                      className={cn()}
                       onClick={() =>
                         setHomework((prev) => {
                           const copiedAllJob = [...prev.job];
@@ -95,7 +102,7 @@ export default function HomeWork() {
                           let confirmed = window.confirm(
                             "매주 할일을 지우게 됩니다. 진행 하시겠습니까?"
                           );
-                          if (confirmed === true) {
+                          if (confirmed) {
                             const copiedAllJob = [...prev.job];
                             const copiedCurrentJob = currentJob!;
 
@@ -154,7 +161,12 @@ export default function HomeWork() {
         <div className="weeklytask">
           <div className="task_header">
             <h1>매주 해야 할 일</h1>
-            <button onClick={onClickHandel}>할 일 추가</button>
+            <button
+              className={cn("tasks_btn", darkmode ? "dark_mode_task_btn" : "")}
+              onClick={onClickHandel}
+            >
+              할 일 추가
+            </button>
           </div>
           <div className="weeklytasks">
             {!currentJobTask?.WeeklyWork?.length ? (
@@ -181,7 +193,7 @@ export default function HomeWork() {
                           const copiedCurrentJobWeeklyTask =
                             copiedCurrentJob?.Work.WeeklyWork!;
 
-                          const copiedCurrentJobDailyTaks =
+                          const copiedCurrentJobDailyTakes =
                             copiedCurrentJob.Work.DailyWork;
 
                           const updateCurrentJobWeeklyTask =
@@ -195,7 +207,7 @@ export default function HomeWork() {
                           const updateCurrentJob = {
                             ...copiedCurrentJob,
                             Work: {
-                              DailyWork: copiedCurrentJobDailyTaks,
+                              DailyWork: copiedCurrentJobDailyTakes,
                               WeeklyWork: updateCurrentJobWeeklyTask,
                             },
                           };
@@ -217,7 +229,7 @@ export default function HomeWork() {
                           let confirmed = window.confirm(
                             "매주 할일을 지우게 됩니다. 진행 하시겠습니까?"
                           );
-                          if (confirmed === true) {
+                          if (confirmed) {
                             const copiedAllJob = [...prev.job];
                             const copiedCurrentJob = currentJob!;
 

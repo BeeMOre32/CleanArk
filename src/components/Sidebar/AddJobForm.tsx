@@ -2,9 +2,10 @@ import { motion, Variants } from "framer-motion";
 import { IAddJobFormProp, IJobForm } from "../../interface/interface";
 import { JobList } from "../../JobList";
 import { useForm } from "react-hook-form";
-import { useRecoilState } from "recoil";
-import { Job } from "../../Atoms/Atom";
+import { useRecoilState, useRecoilValue } from "recoil";
+import { DarkMode, Job } from "../../Atoms/Atom";
 import "../../styles/main/addcharacter.css";
+import cn from "classnames";
 
 const AddCharacterFormVar: Variants = {
   start: { y: -200, opacity: 0 },
@@ -15,7 +16,9 @@ const AddCharacterFormVar: Variants = {
 export default function AddJobForm({
   toggleAddCharacterForm,
 }: IAddJobFormProp) {
-  const [char, setChar] = useRecoilState(Job);
+  const darkmode = useRecoilValue(DarkMode);
+
+  const [, setChar] = useRecoilState(Job);
 
   const {
     register,
@@ -45,10 +48,7 @@ export default function AddJobForm({
 
   const checkValidateonJob = (value: string) =>
     JobList.some((element) => {
-      if (element.job === value) {
-        return true;
-      }
-      return false;
+      return element.job === value;
     });
 
   return (
@@ -59,7 +59,12 @@ export default function AddJobForm({
       exit="exit"
       className="add_character"
     >
-      <div className="add_character_form">
+      <div
+        className={cn(
+          "add_character_form",
+          darkmode ? "dark_mode_add_form" : "light_mode_add_form"
+        )}
+      >
         <div className="add_character_form_header">
           <h1>캐릭터 추가</h1>
           <button onClick={toggleAddCharacterForm}>❌</button>

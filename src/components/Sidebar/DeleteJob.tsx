@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useSetRecoilState } from "recoil";
 import { Job } from "../../Atoms/Atom";
 import { IDeleteJobComProp } from "../../interface/interface";
