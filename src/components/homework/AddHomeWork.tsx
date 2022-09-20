@@ -37,7 +37,9 @@ export default function AddHomeWork({ onClickHandel }: any) {
   const [JobList, setHomeWork] = useRecoilState(Job);
 
   const Param = useParams();
-  const currentJob = JobList.job.find((index) => index.name === Param.id);
+  const Parameter = Number(Param.id);
+
+  const currentJob = JobList.job.find((index) => index.id === Parameter);
 
   const {
     register,

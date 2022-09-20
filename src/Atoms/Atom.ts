@@ -10,21 +10,12 @@ const { persistAtom } = recoilPersist({
 export const Job = atom<IJobState>({
   key: "job",
   default: {
-    job: [
-      {
-        id: 0,
-        class: "소서리스",
-        name: "test",
-        Work: {
-          DailyWork: [],
-          WeeklyWork: [],
-        },
-      },
-    ],
+    job: [],
   },
+  effects_UNSTABLE: [persistAtom],
 });
 
-export const DarkMode = atom({
+export const DarkMode = atom<boolean>({
   key: "DarkMode",
   default: false,
   effects_UNSTABLE: [persistAtom],

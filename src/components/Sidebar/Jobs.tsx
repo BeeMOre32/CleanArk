@@ -26,7 +26,7 @@ function Jobs(job: JobComProps) {
               darkmode ? "dark_mode_job" : "light_mode_job"
             )}
           >
-            <Link to={job.name} className="job_link">
+            <Link to={job.id + ""} className="job_link">
               <img
                 src={process.env.PUBLIC_URL + "/images/" + job.class + ".png"}
                 width="45px"

@@ -13,8 +13,9 @@ export default function HomeWork() {
   const [JobList, setHomework] = useRecoilState(Job);
   // 파람 가져오는 함수
   const Param = useParams();
+  const Parameter = Number(Param.id);
   // 현재 파람을 기반으로 보여지고 있는 페이지의 직업의 오브젝트를 가져오는 작업
-  const currentJob = JobList.job.find((index) => index.name === Param.id);
+  const currentJob = JobList.job.find((index) => Parameter === index.id);
   // 현재 보고 있는 직업의 숙제를 가져오는 변수
   const currentJobTask = currentJob?.Work;
 
