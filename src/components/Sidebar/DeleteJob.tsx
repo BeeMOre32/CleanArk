@@ -1,13 +1,16 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { useSetRecoilState } from "recoil";
-import { Job } from "../../Atoms/Atom";
+import { useRecoilValue, useSetRecoilState } from "recoil";
+import { DarkMode, Job } from "../../Atoms/Atom";
 import { IDeleteJobComProp } from "../../interface/interface";
+import cn from "classnames";
 
 export default function DeleteJob({
   onClickHandle,
   JobName,
 }: IDeleteJobComProp) {
+  const darkmode = useRecoilValue(DarkMode);
+
   const setJob = useSetRecoilState(Job);
 
   const onDeleteButtonClickHandel = () => {
@@ -30,7 +33,12 @@ export default function DeleteJob({
   };
   return (
     <div className="job_delete_modal">
-      <div className="job_delete_modal_div">
+      <div
+        className={cn(
+          "job_delete_modal_div",
+          darkmode ? "dark_mode_job_delete_modal" : ""
+        )}
+      >
         <span>
           이 작업이 실행되면 전에 했던 데이터가 모두 삭제 됩니다. 캐릭터를 삭제
           하시겠습니까?

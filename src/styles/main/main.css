@@ -98,7 +98,6 @@
   height: 4rem;
   padding: 0;
   background-color: inherit;
-  border: 1px solid black;
 }
 
 .home {
@@ -161,6 +160,14 @@
 
 .light_mode_area {
   background-color: #74b9ff;
+}
+
+.dark_mode_job_delete_modal {
+  background-color: #34495e;
+}
+.dark_mode_job_delete_modal button {
+  color: #ecf0f1;
+  border: 1px solid #ecf0f1;
 }
 
 /*# sourceMappingURL=main.css.map */

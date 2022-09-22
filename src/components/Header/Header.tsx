@@ -3,6 +3,7 @@ import "../../styles/header/header.css";
 import { useRecoilValue } from "recoil";
 import { DarkMode } from "../../Atoms/Atom";
 import cn from "classnames";
+import DarkModeBtn from "./DarkModeBtn";
 
 export default function Header() {
   const darkMode = useRecoilValue(DarkMode);
@@ -14,8 +15,10 @@ export default function Header() {
         <Link to="/">
           <span className={cn(darkMode ? "dark_mode" : "")}>Home</span>
         </Link>
+        <Link to="/setting">Settings</Link>
       </div>
-      <Link to="/setting">Settings</Link>
+
+      <DarkModeBtn />
     </header>
   );
 }

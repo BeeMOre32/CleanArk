@@ -87,7 +87,6 @@ $box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.06);
     align-items: center;
     justify-content: space-around;
     margin-top: 10rem;
-
     button {
       font-size: 1.4rem;
       border-radius: 10px;
@@ -95,7 +94,6 @@ $box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.06);
       height: 4rem;
       padding: 0;
       background-color: inherit;
-      border: 1px solid black;
     }
   }
 }
@@ -152,4 +150,11 @@ $box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.06);
 }
 .light_mode_area {
   background-color: #74b9ff;
+}
+.dark_mode_job_delete_modal {
+  background-color: #34495e;
+  button {
+    color: #ecf0f1;
+    border: 1px solid #ecf0f1;
+  }
 }

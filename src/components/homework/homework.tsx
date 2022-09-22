@@ -19,10 +19,10 @@ export default function HomeWork() {
   // 현재 보고 있는 직업의 숙제를 가져오는 변수
   const currentJobTask = currentJob?.Work;
 
-  const [sidebarShowing, setSiebarShowing] = useState(false);
+  const [sidebarShowing, setSidebarShowing] = useState(false);
 
   const onClickHandel = () => {
-    setSiebarShowing((prev) => !prev);
+    setSidebarShowing((prev) => !prev);
   };
 
   return (

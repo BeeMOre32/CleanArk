@@ -28,8 +28,6 @@ export default function AddJobForm({
   } = useForm<IJobForm>();
 
   const onSubmit = (data: IJobForm) => {
-    console.log(errors);
-
     const NewJob = {
       id: Date.now(),
       class: data.class,

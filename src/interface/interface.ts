@@ -56,3 +56,11 @@ export interface IAddHomeWorkForm {
   type: "DailyWork" | "WeeklyWork";
   name: string;
 }
+
+export interface IPasteForm {
+  pasted: string;
+}
+
+export interface IPasteFormProp {
+  togglePasteCom: () => void;
+}
