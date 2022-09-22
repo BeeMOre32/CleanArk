@@ -1,13 +1,16 @@
 {
   "files": {
-    "main.css": "/CleanArk/static/css/main.e4f3d2cc.css",
-    "main.js": "/CleanArk/static/js/main.4c93b0e6.js",
+    "main.css": "/CleanArk/static/css/main.8d403abe.css",
+    "main.js": "/CleanArk/static/js/main.454069a3.js",
+    "static/media/light-mode-icon.svg": "/CleanArk/static/media/light-mode-icon.9adbbca58372a3f8c15271c290d19fa3.svg",
+    "static/media/copy-icon.svg": "/CleanArk/static/media/copy-icon.e88a7cef263f912a5d9b17540ba61e97.svg",
+    "static/media/dark-mode-icon.svg": "/CleanArk/static/media/dark-mode-icon.487879f9992e24fe363b2376aec1de63.svg",
     "index.html": "/CleanArk/index.html",
-    "main.e4f3d2cc.css.map": "/CleanArk/static/css/main.e4f3d2cc.css.map",
-    "main.4c93b0e6.js.map": "/CleanArk/static/js/main.4c93b0e6.js.map"
+    "main.8d403abe.css.map": "/CleanArk/static/css/main.8d403abe.css.map",
+    "main.454069a3.js.map": "/CleanArk/static/js/main.454069a3.js.map"
   },
   "entrypoints": [
-    "static/css/main.e4f3d2cc.css",
-    "static/js/main.4c93b0e6.js"
+    "static/css/main.8d403abe.css",
+    "static/js/main.454069a3.js"
   ]
 }
