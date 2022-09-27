@@ -1,0 +1,129 @@
+.setting {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+.setting_dark_mode {
+  display: flex;
+  border-radius: 35px;
+  width: 120px;
+  height: 3rem;
+  align-items: center;
+  padding: 8px;
+  box-sizing: border-box;
+  top: 10px;
+  right: 10%;
+}
+.setting_dark_mode div {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.setting_dark_mode img {
+  width: 2.5rem;
+  display: block;
+}
+
+.setting_dark_mode[data-isdarkmode=true] {
+  justify-content: flex-end;
+}
+
+.dark_mode_setting_btn {
+  border: 1px #ecf0f1 solid;
+  color: #ecf0f1;
+}
+
+.setting_list {
+  display: flex;
+  flex-direction: column;
+}
+
+.setting_list_copy button {
+  width: 25rem;
+  height: 6rem;
+  font-size: 3rem;
+  background-color: inherit;
+  border-radius: 2rem;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.06);
+}
+
+.setting_list_paste button {
+  width: 25rem;
+  height: 6rem;
+  font-size: 3rem;
+  background-color: inherit;
+  margin-top: 5rem;
+  border-radius: 2rem;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.06);
+}
+
+.setting_list_copy_clipboard {
+  display: flex;
+  align-items: center;
+  background-color: #bdc3c7;
+  width: 27rem;
+  border-radius: 3rem;
+  height: 5rem;
+  position: absolute;
+  padding: 10px;
+  box-sizing: border-box;
+  bottom: 2rem;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.06);
+}
+.setting_list_copy_clipboard img {
+  width: 3rem;
+  margin-left: 1rem;
+  margin-right: 1.2rem;
+}
+.setting_list_copy_clipboard span {
+  font-size: 1.25rem;
+}
+
+.setting_list_reset button {
+  width: 25rem;
+  height: 6rem;
+  font-size: 2.5rem;
+  background-color: inherit;
+  margin-top: 5rem;
+  border-radius: 2rem;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.06);
+}
+
+.paste_form_div {
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.06);
+  background-color: #bdc3c7;
+  padding: 20px;
+  position: absolute;
+  bottom: 10rem;
+  border-radius: 2rem;
+}
+.paste_form_div form div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.paste_form_div textarea {
+  width: 10rem;
+  height: 3rem;
+  font-family: "GmarketSansMedium", serif;
+}
+.paste_form_div button {
+  margin-top: 0;
+  font-size: 1.25rem;
+  width: 8rem;
+  margin-left: 1rem;
+  height: 3rem;
+  border-radius: 0;
+}
+.paste_form_div p {
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+.dark_mode_clipboard_modal {
+  background-color: #34495e;
+}
+
+/*# sourceMappingURL=setting.css.map */
